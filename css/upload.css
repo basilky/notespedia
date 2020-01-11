@@ -1,0 +1,89 @@
+#data {
+	width: 100%;
+	min-height: 100%;
+	text-align: center;
+}
+
+.dm-uploader {
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.dm-uploader .btn {
+	position: relative;
+	overflow: hidden
+}
+
+.dm-uploader .btn input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	border: solid black;
+	border-spacing: 10px;
+	border-radius: 20px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+
+/* 
+	First: A couple styles to make the demo page look good
+ */
+
+hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.progress {
+	height: 1.5rem;
+}
+
+#files {
+	overflow-y: scroll !important;
+	min-height: 320px;
+}
+
+@media (min-width: 768px) {
+	#files {
+		min-height: 0;
+	}
+}
+
+#debug {
+	overflow-y: scroll !important;
+	height: 180px;
+}
+
+/* These are for the single examle */
+
+form {
+	width: 100%;
+	border: solid #353568 !important;
+	border-radius: 10px;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem
+}
+
+form.active {
+	border-color: rgb(32, 236, 59) !important;
+}
+
+form .progress {
+	height: 38px;
+}
+
+.dm-uploader {
+	border: 0.25rem dashed #A5A5C7;
+}
+
+.dm-uploader.active {
+	border-color: rgb(14, 247, 45);
+	border-style: solid;
+}

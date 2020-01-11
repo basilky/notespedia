@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <title>Notespedia</title>
+    <html lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Signin to upload content and rate content uploaded by others.">
+    <meta name="theme-color" content="rgb(80, 107, 144)">
+    <script src="/js/issignedin.js"></script>
+    <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+    <script src=" js/signin.js"> </script>
+    <script>
+        var $buoop = {
+            required: {
+                e: 17, f: 64, o: 50, s: 11, c: 60, i: 999, uc: 11.8,
+                samsung: 8.2
+            },
+            api: 2019.04,
+            url: "http://outdatedbrowser.com/en",
+            reminderClosed: 150
+        };
+        function $buo_f()
+        {
+            var e = document.createElement("script");
+            e.src = "//browser-update.org/update.min.js";
+            document.body.appendChild(e);
+        };
+        try { document.addEventListener("DOMContentLoaded", $buo_f, false) }
+        catch (e) { window.attachEvent("onload", $buo_f) }
+    </script>
+</head>
+
+<body>
+    <div
+        style="overflow-y: auto;
+height: 100px;position:fixed;left:0;top:0;width:100%;height:100%;background:linear-gradient(135deg,rgb(178, 210, 255),rgb(109, 144, 194),rgb(80, 107, 144));text-align:center;padding:2%;">
+        <div id="logger">
+            <div onclick="window.location.href='/'"
+                style="display:inline-block;width:100px;padding-bottom:100px;border-radius:50%;margin:8%;background-image:url('favicon.ico');background-size:cover;">
+            </div>
+            <p style="color:rgb(44,181,232);font-weight:bold;font-size:20px;">Sign in to Notespedia</p>
+
+            <form action="javascript:Verify();">
+                <div class="block">
+                    <input type="text" name="username" id="username" placeholder="Username" autocomplete="foo"
+                        onfocus="fopen('line1');" onblur="fclose('line1');" required>
+                </div>
+                <div class="stand">
+                    <div id="line1"></div>
+                </div>
+                <div class="block">
+                    <input type="password" name="password" id="password" placeholder="Password" autocomplete="foo"
+                        onfocus="fopen('line2');" onblur="fclose('line2');" required>
+                </div>
+                <div class="stand">
+                    <div id="line2"></div>
+                </div>
+                <div class="block" style="padding-top:40px;">
+                    <button style="float:left;margin-left: 30px;border-radius: 5px;" id="submit">Sign
+                        in</button>
+                    <button onclick="googlesignin()" style="float:right;margin-right: 30px;" type="button"
+                        class="google-button">
+                        <span class="google-button__icon">
+                            <svg viewBox="0 0 366 372" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M125.9 10.2c40.2-13.9 85.3-13.6 125.3 1.1 22.2 8.2 42.5 21 59.9 37.1-5.8 6.3-12.1 12.2-18.1 18.3l-34.2 34.2c-11.3-10.8-25.1-19-40.1-23.6-17.6-5.3-36.6-6.1-54.6-2.2-21 4.5-40.5 15.5-55.6 30.9-12.2 12.3-21.4 27.5-27 43.9-20.3-15.8-40.6-31.5-61-47.3 21.5-43 60.1-76.9 105.4-92.4z"
+                                    id="Shape" fill="#EA4335" />
+                                <path
+                                    d="M20.6 102.4c20.3 15.8 40.6 31.5 61 47.3-8 23.3-8 49.2 0 72.4-20.3 15.8-40.6 31.6-60.9 47.3C1.9 232.7-3.8 189.6 4.4 149.2c3.3-16.2 8.7-32 16.2-46.8z"
+                                    id="Shape" fill="#FBBC05" />
+                                <path
+                                    d="M361.7 151.1c5.8 32.7 4.5 66.8-4.7 98.8-8.5 29.3-24.6 56.5-47.1 77.2l-59.1-45.9c19.5-13.1 33.3-34.3 37.2-57.5H186.6c.1-24.2.1-48.4.1-72.6h175z"
+                                    id="Shape" fill="#4285F4" />
+                                <path
+                                    d="M81.4 222.2c7.8 22.9 22.8 43.2 42.6 57.1 12.4 8.7 26.6 14.9 41.4 17.9 14.6 3 29.7 2.6 44.4.1 14.6-2.6 28.7-7.9 41-16.2l59.1 45.9c-21.3 19.7-48 33.1-76.2 39.6-31.2 7.1-64.2 7.3-95.2-1-24.6-6.5-47.7-18.2-67.6-34.1-20.9-16.6-38.3-38-50.4-62 20.3-15.7 40.6-31.5 60.9-47.3z"
+                                    fill="#34A853" /></svg>
+                        </span>
+                        <span class="google-button__text">Sign in</span>
+                    </button>
+                </div>
+                <br>
+                <div class="block">
+                    <p style="color:rgb(44,181,232);font-weight:bold;font-size:14px;">Don't have an Account ?
+                        <br>
+                        <a href="signup">Signup now</a>
+                        <br>
+                        <a href="#" data-target="#pwdModal" data-toggle="modal">Forgot Password?</a>
+                    </p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="justify-content:center;">
+                    <h1 class="text-center">Forgot Password?</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="text-center">
+
+                                    <p>If you have forgotten your password you can reset it here.</p>
+                                    <div class="panel-body">
+                                        <form action="javascript:Forgot();" method="post">
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <input id="email" class="form-control input-lg"
+                                                        placeholder="E-mail Address" name="email" type="email">
+                                                </div>
+                                                <input id="reset" class="btn btn-lg btn-primary btn-block"
+                                                    value="Send Reset Link" type="submit">
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

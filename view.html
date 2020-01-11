@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="rgb(80, 107, 144)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
+    iframe {
+        display: block;
+        background: #000;
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <iframe id="frame" frameborder="0" style="overflow:hidden;height:100%;width:100%"></iframe>
+    <script>
+        var title = new URLSearchParams(location.search).get('title');
+        var id = new URLSearchParams(location.search).get('id');
+        document.title = title;
+        document.getElementById('frame').src = "https://drive.google.com/file/d/" + id + "/preview";
+        //var uri = "https://drive.google.com/uc?export=download&id=" + id;
+        //setTimeout(function () { document.getElementById('frame').src = "https://docs.google.com/viewer?url=" + encodeURIComponent(uri) + "&embedded=true"; }, 300);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+.quote{
+text-align:center;
+color:black;
+}
+.btn-8,
+.btn-8:before,
+.btn-8:after {
+  box-sizing: border-box;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -ms-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -o-transition: 1.5s;
+}
+.btn-8:before,
+.btn-8:after {
+  z-index: -1;
+}
+.focus-grid {
+  border-radius: 20px;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.boder1 {
+  border: 1px solid #dd0908;
+}
+.boder2 {
+  border: 1px solid #ff9e29;
+}
+.boder3 {
+  border: 1px solid #3fb7d2;
+}
+.boder4 {
+  border: 1px solid #15c01c;
+}
+.boder5 {
+  border: 1px solid #7e3b07;
+}
+.boder6 {
+  border: 1px solid #1963ce;
+}
+.boder7 {
+  border: 1px solid #c119ce;
+}
+.boder8 {
+  border: 1px solid #7fbad8;
+}
+.boder9 {
+  border: 1px solid #1ca39d;
+}
+.boder10 {
+  border: 1px solid #f49ecf;
+}
+.boder11 {
+  border: 1px solid #070c1f;
+}
+.boder12 {
+  border: 1px solid #ff7878;
+}
+.btn-8:before,
+.btn-8:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #cfdae9;
+}
+.btn-8:after {
+  top: auto;
+  bottom: 0;
+}
+.btn-8:hover {
+  color: #d8e4ef;
+}
+.btn-8:hover:before,
+.btn-8:hover:after {
+  height: 100%;
+}
+.btn-8:active {
+  background: #6492bf;
+}
+.categories {
+  padding: 5px 0px 45px 0px;
+}
+.categories h3 {
+  color: #0099e5;
+  font-size: 40px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.categories h3:before,
+.categories h3:after {
+  width: 170px;
+  height: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  background: #000;
+  margin: 0 1%;
+}
+.focus-grid a {
+  text-decoration: none;
+}
+.focus-grid {
+  margin-top: 30px;
+}
+.focus-grid h4 {
+  text-align: left;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: #323232;
+}
+.focus-grid h4 span {
+  display: block;
+  font-size: 0.5em;
+  margin: 10px 0;
+  transition: 0.5s all;
+  -webkit-transition: 1.5s all;
+  -moz-transition: 1.5s all;
+  -o-transition: 1.5s all;
+  -ms-transition: 1.5s all;
+}
+.focus-grid p {
+  margin: 20px 0 0px 0;
+  font-size: 1.2em;
+  color: #797979;
+  font-weight: 300;
+  line-height: 1.9em;
+}
+.focus-border {
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.focus-layout {
+  background: transparent;
+  transition: 1.5s all;
+  -webkit-transition: 1.5s all;
+  -moz-transition: 1.5s all;
+  -o-transition: 1.5s all;
+  -ms-transition: 1.5s all;
+}
+.focus-layout {
+  margin: 5px;
+  padding: 20px 0;
+  transition: 0.5s all;
+  -webkit-transition: 1.5s all;
+  -moz-transition: 1.5s all;
+  -o-transition: 1.5s all;
+  -ms-transition: 1.5s all;
+  text-align: center;
+}
+.focus-layout:hover {
+  background-color: transparent;
+  transition: 0.5s all;
+  -webkit-transition: 1.5s all;
+  -moz-transition: 1.5s all;
+  -o-transition: 1.5s all;
+  -ms-transition: 1.5s all;
+}
+.focus-layout h4 {
+  margin: 0 0 0 0;
+  color: #4c4c4c;
+  font-size: 18px;
+  text-align: center;
+  height: 35px;
+  margin-top: 20px;
+}
+.focus-layout h5 {
+  margin: 0 0 0 0;
+  color: #4c4c4c;
+  font-size: 18px;
+  text-align: center;
+  height: 35px;
+  margin-top: 20px;
+}
+.focus-grids {
+  margin-top: 5em;
+}
+.focus-image {
+  text-align: center;
+  transition: 0.5s all;
+  -webkit-transition: 1.5s all;
+  -moz-transition: 1.5s all;
+  -o-transition: 1.5s all;
+  -ms-transition: 1.5s all;
+}
+.focus-image i {
+  font-size: 40px;
+  color: #fff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  line-height: 95px;
+  transition: 0.5s all;
+  -webkit-transition: 1.5s all;
+  -moz-transition: 1.5s all;
+  -o-transition: 1.5s all;
+  -ms-transition: 1.5s all;
+}
+.focus-layout:hover div.focus-image i {
+  background: #fbfbfb;
+  color: #000;
+  transition: 0.5s all;
+  -webkit-transition: 1.5s all;
+  -moz-transition: 1.5s all;
+  -o-transition: 1.5s all;
+  -ms-transition: 1.5s all;
+}

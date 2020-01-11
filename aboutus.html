@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="rgb(80, 107, 144)">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <style>
+        body,
+        html {
+            height: 80%;
+        }
+    </style>
+</head>
+
+<!-- dep test -->
+
+<body style="display: none;">
+    <div id="nav-placeholder" class="sticky-top">
+
+    </div>
+
+    <script>
+        $(function ()
+        {
+            $('body').show();
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <div class="container h-100 d-flex">
+        <div class="my-auto">
+            <div>
+                <h3>Notespedia was created by CSE students of Muthoot Institute of Technology and
+                    Science. Please <a href="contact"> contact us</a> with your suggestions to improve Notespedia.
+                    <br><span style='font-size:70px;'>&#128536;</span></h3>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

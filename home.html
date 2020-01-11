@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<title>Notespedia</title>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="rgb(80, 107, 144)">
+	<meta name="description" content="Access various services offered by Notespedia.">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<link href="/css/home.css" rel="stylesheet" type="text/css" media="all">
+	<script src="/js/home.js"></script>
+
+<body style="display: none;">
+	<div id="nav-placeholder" class="sticky-top">
+	</div>
+	<script>
+		$(function ()
+		{
+			$('body').show();
+			$("#nav-placeholder").load("navbar.html");
+		});
+	</script>
+
+	<div class="container">
+		<div class="categories">
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-3 col-sm-12">
+					<div class="focus-grid boder1">
+						<a class="btn-8" href="view/notes">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-book-open" style="background:#F4A460"></i>
+									</div>
+									<h4>Notes</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-12">
+					<div class="focus-grid boder2">
+						<a class="btn-8" href="view/qp">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fas fa-question" style="background:#20B2AA"></i>
+									</div>
+									<h4>Question Papers</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-12">
+					<div class="focus-grid boder3">
+						<a class="btn-8" href="view/syllabus">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fas fa-th-list" style="background:#00BFFF"></i>
+									</div>
+									<h4>Syllabus</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-12">
+					<div class="focus-grid boder4">
+						<a class="btn-8" href="uploadnote">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-cloud-upload-alt"
+											style="background:#EE82EE"></i></div>
+									<h4>Upload Notes</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-12">
+					<div class="focus-grid boder5">
+						<a class="btn-8" href="uploadqp">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fas fa-file-upload"
+											style="background:#DB7093"></i></div>
+									<h5>Upload Question Papers</h5>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-12">
+					<div class="focus-grid boder6">
+						<a id="forum" class="btn-8" href="">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-comments" style="background:#F08080"></i>
+									</div>
+									<h4>Forum</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="quote" class="quote">
+		</div>
+	</div>
+	<div id="aboutus">
+		<div style="float: right;">
+			<a href="/privacypolicy.html">Privacy Policy</a>&nbsp;&nbsp;
+			<a href="/contact">Contact Us</a>&nbsp;&nbsp;
+			<a href="/aboutus">About Us</a>&nbsp;&nbsp;
+		</div>
+	</div>
+</body>
+
+</html>

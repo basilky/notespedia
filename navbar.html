@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top  navbar-fixed-top navbar-dark"
+  style="background-color: rgb(80, 107, 144)!important;padding-top: 0;padding-bottom: 2px;">
+  <meta name="robots" content="noindex">
+  <a class="navbar-brand" href="/home">
+    <img src="/favicon.ico" alt="logo" style="width:40px;">
+  </a>
+  <a class="navbar-brand" href="/home">Notespedia</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/view/notes">Notes</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/view/qp">Question Papers</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/view/syllabus">Syllabus</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" id="navforum" href="">Forum&nbsp;&nbsp;&nbsp;</a>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="btn btn-primary dropdown-toggle" style="background-color:#455f80;" type="button" id="navbutton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My Notespedia
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDropdownDemo">
+          <a class="dropdown-item" id="profile" href="/comingsoon">View Profile</a>
+          <a class="dropdown-item" id="reset" href="/changepassword">Reset Password</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/logout.php">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script>
+  var b = document.getElementById('navbutton');
+  var baseurl = window.location.origin;
+  var issignedin = false;
+  var a = document.getElementById('navforum');
+  a.href = "https://forum." + window.location.hostname;
+  if (sessionStorage.username)
+  {
+    b.innerText = sessionStorage.username;
+  }
+  else
+  {
+    sessionStorage.username = " My Notespedia "
+  }
+  fetch("//" + window.location.hostname + "/issignedin.php")
+    .then((resp) => resp.text())
+    .then(function (data)
+    {
+      if (data == "1")
+      {
+        issignedin = true;
+        fetch('/getusername.php')
+          .then((resp) => resp.text())
+          .then(function (data)
+          {
+            b.innerText = data;
+            sessionStorage.username = data;
+            var a = document.getElementById('profile');
+            a.href = "https://forum." + window.location.hostname + "/u/" + data;
+          })
+      }
+      else
+      {
+        sessionStorage.username = " My Notespedia ";
+        b.innerText = sessionStorage.username;
+      }
+    });
+  $('#navbutton').click(function (e)
+  {
+    if (!issignedin)
+    {
+      e.stopPropagation();
+      window.location.href = baseurl + "/signin";
+    }
+  });
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="rgb(31,200,219)">
+  <meta name="description" content="Browse through notes uploaded by KTU students.">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <!-- for bootstrap-select -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+  <link rel="stylesheet" href="/css/loader.css">
+  <script src="/js/loadsubjects.js"></script>
+</head>
+
+<body style="display: none;">
+  <div id="nav-placeholder" class="sticky-top">
+  </div>
+  <script>
+    $(function ()
+    {
+      $('body').show();
+      $("#nav-placeholder").load("/navbar.html");
+    });
+  </script>
+  <div class="conainer" id="container" style="background-color:#d7dfea;">
+    <div class="row" style="margin: auto;padding-left: 20px;padding-right: 20px;padding-top: 20px;">
+      <div v-else class="col-md-12 remove" style="padding-bottom:10px"><br>
+        <label>Choose required category and click on 'Go'.</label>
+      </div>
+      <div class="form-group col-xs-10 col-sm-6 col-md-6 col-lg-6">
+        <select autocomplete="off" class="form-control selectpicker" name="branch" id="branch" required>
+          <option value="hidden" selected disabled hidden>Select Branch</option>
+          <option value="common">Common Subject</option>
+          <option value="me">Mechanical</option>
+          <option value="cse">Computer Science</option>
+          <option value="ce">Civil</option>
+          <option value="eee">Electrical</option>
+          <option value="ece">Electronics</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-10 col-sm-6 col-md-6 col-lg-6">
+        <select autocomplete="off" class="form-control selectpicker" name="semester" id="semester" required>
+          <option value="hidden" selected disabled hidden>Select Semester</option>
+          <option value="common">1st Year(Common)</option>
+          <option value="3">Semester 3</option>
+          <option value="4">Semester 4</option>
+          <option value="5">Semester 5</option>
+          <option value="6">Semester 6</option>
+          <option value="7">Semester 7</option>
+          <option value="8">Semester 8</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-10 col-sm-6 col-md-6 col-lg-6">
+        <select autocomplete="off" class="form-control selectpicker" name="subject" id="subject" required>
+          <option value="hidden" selected disabled hidden>Select Subject</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-10 col-sm-6 col-md-6 col-lg-6">
+      </div>
+      <div class="form-group col-xs-10 col-sm-6 col-md-6 col-lg-6" style="text-align:left">
+        <button type="button" id="go" class="btn btn-success btn-md"
+          style="width:100px;height: 40px;background-color: #445d7d;">Go</button>
+      </div>
+      <br>
+    </div>
+  </div>
+  <div id="app">
+  </div>
+</body>
+
+</html>

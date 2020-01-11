@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Verify Notes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="rgb(31,200,219)">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" src="/css/loader.css">
+  <script src="/js/loadsubjects.js"></script>
+</head>
+
+<body style="display: none;">
+  <div id="nav-placeholder" class="sticky-top">
+  </div>
+  <script>
+    $(function ()
+    {
+      $('body').show();
+      $("#nav-placeholder").load("/navbar.html");
+    });
+  </script>
+  <div id="app">
+  </div>
+</body>
+
+</html>

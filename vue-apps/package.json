@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@types/jquery": "^3.3.31",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "vue": "^2.6.11",
     "vue-star-rating": "^1.6.1"
   },
